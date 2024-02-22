@@ -13,6 +13,8 @@
   "dependencies": {
     "bootstrap": "^5.3.2",
     "bootstrap-vue-next": "^0.16.3",
+    "h3": "^1.10.2",
+    "nodemailer": "^6.9.10",
     "nuxt": "^3.10.2",
     "vue": "^3.4.19",
     "vue-router": "^4.2.5"
