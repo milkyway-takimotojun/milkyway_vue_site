@@ -16,6 +16,7 @@
     "h3": "^1.10.2",
     "nodemailer": "^6.9.10",
     "nuxt": "^3.10.2",
+    "vite-plugin-vue-component-preview": "^1.1.6",
     "vue": "^3.4.19",
     "vue-router": "^4.2.5"
   },

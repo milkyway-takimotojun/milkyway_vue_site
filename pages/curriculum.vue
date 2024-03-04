@@ -1,26 +1,18 @@
 <template>
     <section class="curriculum">
-      <h2>カリキュラム</h2>
-      <div class="curriculum-list">
-        <CurriculumItem
-          v-for="(curriculum, index) in curriculums"
-          :key="index"
-          :title="curriculum.title"
-          :description="curriculum.description"
-          :image="curriculum.image"
-        />
-      </div>
+      <Contents />
     </section>
   </template>
   
   <script lang="ts">
-  import { defineComponent } from 'vue';
   import CurriculumItem from '../components/CurriculumItem.vue';
+  import Contents from '../components/curricuram/contents.vue';
   
   export default defineComponent({
     name: 'Curriculum',
     components: {
-      CurriculumItem
+      CurriculumItem,
+      Contents,
     },
     data() {
       return {
@@ -43,8 +35,11 @@
   </script>
   
   <style scoped>
+
+
   .curriculum {
     /* スタイルをここに追加 */
+    height: 100vh;
   }
   
   .curriculum-list {

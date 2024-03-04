@@ -1,6 +1,5 @@
 <template>
-  <div class="row">
-    <!-- <NuxtWelcome /> -->
+  <div>
     <NuxtLayout>
       <NuxtPage />
     </NuxtLayout>
@@ -9,6 +8,6 @@
 
 <style scoped>
 div{
-  background-color: #aecfed;;
+  background-color: #aecfed;
 }
 </style>

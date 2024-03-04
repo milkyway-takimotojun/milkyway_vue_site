@@ -19,12 +19,21 @@
           <li>テクノロジーの力で、どんな夢もかなえよう！</li>
         </ul>
       </section>
+
       <kyouiku />
-      <h2>授業スケジュール</h2>
-      <ScaduleTable />
+
+      <section class="school-values">
+        <h2 style="paddiing-top=20px">授業スケジュール</h2>
+        <ScaduleTable />
+      </section>
+
+      <section class="school-values">
+      <h2>教室情報</h2>
+      <KyousituInfo />
+      </section>
       
       <footer class="school-footer">
-        <button type="button" class="btn btn-join">無料体験に参加する</button>
+        <router-link to="/contact" class="btn btn-experience">無料体験教室はこちら</router-link>
       </footer>
     </div>
   </template>
@@ -39,6 +48,7 @@
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 10px;
   }
   
   .school-header h1 {
@@ -60,6 +70,7 @@
     color: #5c6bc0;
     font-size: 2em;
     margin-bottom: 10px;
+    margin-top: 10px;
   }
   
   .school-values ul {
@@ -75,13 +86,13 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
   
-  -footer {
-   -align: center;
+  footer.school-footer {
+    text-align: center;
     margin-top: 20px;
   }
   
   .btn-join {
-   -color: #ff8a65;
+   background-color: #ff8a65;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -94,4 +105,16 @@
   .btn-join:hover {
     background-color: #ff7043;
   }
+
+  .btn-experience {
+    background-color: #ffdd57; /* 明るいボタン色 */
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.3s;
+  }
+
   </style>

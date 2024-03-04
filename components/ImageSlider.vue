@@ -17,9 +17,10 @@
 </template>
 
 <script setup>
-    import image1 from '@/assets/img/1707575283698.png';
-    import image2 from '@/assets/img/1707575308617.png';
-    import image3 from '@/assets/img/37469833.jpg'
+    import image1 from '@/assets/img/slider/キーボード1.jpeg';
+    import image2 from '@/assets/img/slider/男の子.jpeg';
+    import image3 from '@/assets/img/slider/キーボード2.jpeg';
+    
 
     const images = [
         {id:1, src: image1, alt: 'Image 1' ,interval:5000},
@@ -41,8 +42,9 @@ div{
     display: block; /* ブロック要素として設定 */
     margin-left: auto; /* 左のマージンを自動に設定 */
     margin-right: auto; /* 右のマージンを自動に設定 */
-    width: 100%; /* または任意のパーセンテージ */
-    height: 10%; /* 画像の高さを自動調整（アスペクト比を維持） */
+    margin-top: 10px;
+    width: 70%; /* または任意のパーセンテージ */
+    height: auto; /* 画像の高さを自動調整（アスペクト比を維持） */
 }
 
 </style>

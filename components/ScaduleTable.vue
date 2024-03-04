@@ -10,14 +10,6 @@
             <th scope="col">開校時間</th>
             <td>10：15～11：45</td>
           </tr>
-          <tr>
-            <th scope="col">入会金</th>
-            <td>￥8,000</td>
-          </tr>
-          <tr>
-            <th scope="col">月謝</th>
-            <td>￥6,500</td>
-          </tr>
         </tbody>
       </table>
     </div>

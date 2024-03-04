@@ -4,6 +4,10 @@ import nodemailer from 'nodemailer';
 export default defineEventHandler(async (event) => {
   const body = await readBody(event);
 
+  const messageBody = Object.keys(body).map(key => {
+    return `${key} : ${body[key]}`;
+  }).join('\n');
+
   // SMTP設定と認証情報は環境変数から取得する
   const transporter = nodemailer.createTransport({
     host: process.env.SMTP_HOST,
@@ -19,9 +23,9 @@ export default defineEventHandler(async (event) => {
   const mailOptions = {
     from: process.env.MAIL_FROM, // 送信元のアドレス
     to: process.env.MAIL_TO, // 宛先のメールアドレス
-    subject: body.subject, // メールの件名
-    text: body.message, // メールの本文
-    html: `<p>${body.message}</p>`, // HTML形式のメール本文（オプション）
+    subject: process.env.MAIL_SUBJECT, // メールの件名
+    text: messageBody, // メールの本文
+    html: `<p>${messageBody.replace(/\n/g, '<br>')}</p>`, // HTML形式のメール本文（オプション）
   };
 
   // メールの送信

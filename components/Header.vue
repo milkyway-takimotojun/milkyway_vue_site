@@ -1,23 +1,23 @@
 <template>
-    <div class="row">
-        <!-- <b-navbar toggleable="lg" type="dark" variant="light"> -->
-        <ul id="" class="navbar-nav horizontal" >
-            <router-link to="/" >
-                <!-- <img src="../assets/ミルキーウェイ.jpg" alt="ミルキーウェイ" class="milkyway-logo"/> -->
-            </router-link>
-
-            <li class="nav-item xl" v-for="link in navLinks" :key="link.name">
-                <router-link class="nav-link clay-card" :to="link.path" >{{ link.name }}</router-link>
-            </li>
-        </ul>
-        <!-- </b-navbar> -->
+    <div>
+      <button @click="toggleMenu" class="hamburger" v-if="isMobile">☰</button>
+      <ul v-show="!isMobile || menuOpen" class="navbar-nav horizontal">
+        <router-link to="/" class="logo">
+          <img src="@/assets/img/logo.jpg" />
+        </router-link>
+        <li class="nav-item xl" v-for="link in navLinks" :key="link.name">
+          <router-link class="nav-link clay-card" :to="link.path">{{ link.name }}</router-link>
+        </li>
+      </ul>
     </div>
-</template>
+  </template>
+  
 
 <script>
 import  { defineComponent } from 'vue';
 export default defineComponent({
     name: 'Header',
+    
     data(){
         return {
             navLinks:[
@@ -30,12 +30,14 @@ export default defineComponent({
             ]
         }
     }
+    
 })
 </script>
 
 
 <style scoped>
 /* ここにスタイリングを追加します。scoped属性を使用して、このスタイルがこのコンポーネントにのみ適用されるようにしています。 */
+
 
 .menu-item {
   list-style: none;
@@ -64,7 +66,7 @@ export default defineComponent({
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    background-color: #aecfed;
+    background-color: #0e84f3;
     padding: 40px;
 }
 
@@ -92,5 +94,40 @@ export default defineComponent({
   box-shadow: 
     15px 15px 30px #BEBEBE, 
     -15px -15px 30px #FFFFFF;
+}
+
+.logo img {
+  width: 150px; /* ロゴ画像の幅を固定 */
+  height: auto; /* 高さは自動調整でアスペクト比を維持 */
+}
+
+@media (max-width: 768px) {
+  .horizontal {
+    flex-direction: column; /* 縦方向にスタック */
+    padding: 20px; /* モバイルビュー用のパディング */
+  }
+
+  .nav-item {
+    margin: 5px 0; /* アイテム間のマージンを調整 */
+    display: block; /* 各アイテムをブロック要素に */
+  }
+
+  .nav-link {
+    display: block; /* リンクをブロック要素にしてタップしやすく */
+    margin: 5px 0; /* アイテム間のマージンを調整 */
+    padding: 10px; /* タップしやすいようにパディングを追加 */
+  }
+
+  .clay-card {
+    width: auto; /* カードの幅を自動に設定 */
+    padding: 11px; /* カードのパディングを調整 */
+    margin: 10px 0; /* カード間のマージンを追加 */
+  }
+
+  .milkyway-logo {
+    width: 150px; /* ロゴのサイズを小さく */
+    height: auto; /* 高さを自動で調整 */
+    margin-bottom: 20px; /* ロゴの下のマージンを追加 */
+  }
 }
 </style>
