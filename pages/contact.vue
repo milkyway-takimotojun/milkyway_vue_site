@@ -75,6 +75,8 @@
     message: '',
     gender: ''
   });
+
+  const router = useRouter();
   
   const submitForm = async () => {
     try {
@@ -87,11 +89,17 @@
       });
   
       if (response.ok) {
-        // 送信成功のフィードバック
-        alert('送信が完了しました。');
-        // form.email = '';
-        // form.subject = '';
-        // form.message = '';
+        // 送信後にフォームをリセットする
+        form.name = '';
+        form.kana = '';
+        form.age = '';
+        form.address = '';
+        form.email = '';
+        form.tel = '';
+        form.message = '';
+        form.gender = '';
+        // /completeに遷移する
+        router.push('/complete');
       } else {
         // エラーのフィードバック
         alert('送信に失敗しました。');

@@ -1,6 +1,6 @@
 <template>
     <div class="preparation-container">
-      <h1>準備中</h1>
+      <h1>ComingSoon</h1>
       <p>ただいま準備中です。しばらくお待ちください。</p>
     </div>
   </template>
