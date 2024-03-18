@@ -13,6 +13,7 @@
   
   <script setup>
   import image1 from '@/assets/img/teachers/takimotojun.png'
+  import image2 from '@/assets/img/teachers/teacher.png'
 
   const teachers = [
     {
@@ -23,7 +24,7 @@
     },
     {
       name: '補助（女性）',
-      photo: '',
+      photo: image2,
       bio: '現役CGデザイナー。',
       bio2: '生徒一人ひとりの個性を大切に指導します。'
     },

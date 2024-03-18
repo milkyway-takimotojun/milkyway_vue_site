@@ -1,4 +1,5 @@
 <template>
+
   <div class="content-frame curricuram1 img-container">
       <img src="@/assets/img/しっかり習得コース_タイトル.jpg" class="curricuram1" alt="しっかり習得コース_タイトル"/>
       <img src="@/assets/img/しっかり習得コース_説明.jpg" class="curricuram1" alt="しっかり習得コース_説明.jpg"/>
@@ -11,6 +12,7 @@
     </div>
     <img src="@/assets/img/アセット 8@2x-100.jpg" alt="ハイレベルコース_図" class="wide-image"/>
   </div>
+  <PricingComponent />
 </template>
 
 <style scoped>
@@ -22,6 +24,15 @@ background-color: white;
 img {
 padding: 5px;
 }
+
+.content-frame {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* アイテムを中央に揃える */
+  max-width: 987px; /* コンテナの最大幅を指定 */
+  margin: 20px auto; /* 上下に20px、左右に自動で余白を開ける */
+}
+
 .content-frame .curricuram1{
 display: flex;
 flex-direction: column;

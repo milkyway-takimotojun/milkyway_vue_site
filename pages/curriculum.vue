@@ -39,7 +39,7 @@
 
   .curriculum {
     /* スタイルをここに追加 */
-    height: 100vh;
+    height: 100%;
   }
   
   .curriculum-list {

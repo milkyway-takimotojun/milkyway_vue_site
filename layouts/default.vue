@@ -2,7 +2,7 @@
   <div>
     <Nav v-if="isMobile" />
     <Header v-else />
-    
+    <Nuxt />
     <!-- <Menu /> -->
     <slot />
     <Footer />
